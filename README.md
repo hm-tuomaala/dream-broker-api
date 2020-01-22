@@ -17,3 +17,7 @@ will produce:
             "wordCount":3,  
             "characterCount":[{"e":2},{"h":1},{"i":1},{"l":2},{"m":1},{"o":1},{"s":1},{"t":1}]  
 }
+
+# Tests
+Tests can be run with command:  
+./manage.py test
