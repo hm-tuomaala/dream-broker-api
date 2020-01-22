@@ -1,8 +1,8 @@
-## Dream Broker api app
+# Dream Broker api app
 This is my implementation of Dream Brokers coding challenge  
 You can analyze text input with api at: /analyze
 
-# Usage example
+## Usage example
 Command:  
 
 `curl --header "Content-Type: application/json" --request POST
@@ -16,6 +16,6 @@ will produce:
             "characterCount":[{"e":2},{"h":1},{"i":1},{"l":2},{"m":1},{"o":1},{"s":1},{"t":1}]  
 }
 
-# Tests
+## Tests
 Tests can be run with command:  
 `./manage.py test`
