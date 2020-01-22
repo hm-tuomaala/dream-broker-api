@@ -6,7 +6,7 @@ You can analyze text input with api at: /analyze
 Command:  
 
 `curl --header "Content-Type: application/json" --request POST
---data '{"text":"hello 2 times  "}' https://mysuperawesomeapi.com/analyze`  
+--data '{"text":"hello 2 times  "}' / https://mysuperawesomeapi.com/analyze`  
 
 will produce:  
 
