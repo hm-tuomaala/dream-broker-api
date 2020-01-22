@@ -33,5 +33,3 @@ def api_req(request):
                              "withoutSpaces": len(post_data_no_spaces)},
                          "wordCount": word_count,
                           "characterCount": char_count_list})
-    else:
-        return render("API Root")
