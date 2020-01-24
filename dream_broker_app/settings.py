@@ -20,8 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'n(ptcoh*qci&gr32dnp#yb9!ncn6rgez@089=ja$e!v026xoye'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'n(ptcoh*qci&gr32dnp#yb9!ncn6rgez@089=ja$e!v026xoye'
+#SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-MIDDLEWARE_CLASSES = ('whitenoise.middleware.WhiteNoiseMiddleware',)
+#MIDDLEWARE_CLASSES = ('whitenoise.middleware.WhiteNoiseMiddleware',)
 
 ROOT_URLCONF = 'dream_broker_app.urls'
 
@@ -122,12 +122,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = "/mnt/c/Users/Tuomaala/Desktop/Programs/dream_brokers_app/static"
 STATIC_URL = '/static/'
-
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+    # ('js', os.path.join(STATIC_ROOT, 'js')),
+    # ('css', os.path.join(STATIC_ROOT, 'css')),
+    # ('images', os.path.join(STATIC_ROOT, 'images')),
+    # ('fonts', os.path.join(STATIC_ROOT, 'fonts')),
 )
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
