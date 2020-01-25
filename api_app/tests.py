@@ -3,9 +3,14 @@ import requests
 import json
 
 class CurlTestCase(TestCase):
-    
+
     def test_given_curl(self):
-        url = 'http://localhost:8000/analyze'
+        # Use this url in development environment
+        # url = 'http://localhost:8000/analyze'
+
+        # Use this url in production
+        url = 'https://dream-broker-code-challenge.herokuapp.com/analyze'
+
         payload1 = {"text": "hello 2 times  "}
 
         res1 = {
@@ -21,7 +26,12 @@ class CurlTestCase(TestCase):
 
 
     def test_empty_text(self):
-        url = 'http://localhost:8000/analyze'
+        # Use this url in development environment
+        # url = 'http://localhost:8000/analyze'
+
+        # Use this url in production
+        url = 'https://dream-broker-code-challenge.herokuapp.com/analyze'
+
         payload2 = {"text": ""}
 
         res2 = {
@@ -37,7 +47,12 @@ class CurlTestCase(TestCase):
 
 
     def test_only_spaces(self):
-        url = 'http://localhost:8000/analyze'
+        # Use this url in development environment
+        # url = 'http://localhost:8000/analyze'
+
+        # Use this url in production
+        url = 'https://dream-broker-code-challenge.herokuapp.com/analyze'
+
         payload3 = {"text": "   "}
 
         res3 = {
@@ -53,7 +68,12 @@ class CurlTestCase(TestCase):
 
 
     def test_text_with_numbers(self):
-        url = 'http://localhost:8000/analyze'
+        # Use this url in development environment
+        # url = 'http://localhost:8000/analyze'
+
+        # Use this url in production
+        url = 'https://dream-broker-code-challenge.herokuapp.com/analyze'
+
         payload4 = {"text": "123 abc 123"}
 
         res4 = {
