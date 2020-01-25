@@ -34,4 +34,5 @@ def api_req(request):
                          "wordCount": word_count,
                          "characterCount": char_count_list})
     else:
-        return Response()
+        return render(request, 'analyze.html')
+        #return Response()
