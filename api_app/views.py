@@ -12,6 +12,7 @@ def index(request):
 def api_req(request):
     if request.method == "POST":
         post_data = request.data["text"]
+        post_data = post_data.lower()
         post_data_no_spaces = post_data.replace(" ","")
         words = post_data.split(" ")
         word_count = 0
